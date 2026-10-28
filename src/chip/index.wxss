@@ -1,0 +1,31 @@
+/* 所有视觉 token 走 CSS 变量（规范 §3），禁止写死色值 */
+.mp-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--mp-chip-padding-y, 6rpx) var(--mp-chip-padding-x, 20rpx);
+  border-radius: var(--mp-chip-radius, 999rpx);
+  margin-right: var(--mp-chip-gap, 12rpx);
+}
+
+/* 语义色调：变量 fallback 即默认主题，使用方可按 tone 逐个覆写 */
+.mp-chip--brand {
+  background: var(--mp-chip-brand-bg, rgba(7, 193, 96, 0.12));
+}
+.mp-chip--info {
+  background: var(--mp-chip-info-bg, rgba(16, 174, 255, 0.12));
+}
+.mp-chip--warn {
+  background: var(--mp-chip-warn-bg, rgba(250, 157, 59, 0.16));
+}
+.mp-chip--plain {
+  background: var(--mp-chip-plain-bg, rgba(0, 0, 0, 0.05));
+}
+
+.mp-chip--pressed {
+  opacity: var(--mp-chip-pressed-opacity, 0.6);
+}
+
+.mp-chip__text {
+  font-size: var(--mp-chip-font-size, 22rpx);
+  color: var(--mp-chip-color, #374151);
+}
