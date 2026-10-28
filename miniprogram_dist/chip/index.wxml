@@ -1,0 +1,4 @@
+<!-- ext-class 为 externalClasses 占位：使用方 <mp-chip ext-class="my-cls" /> 注入外部类 -->
+<view class="mp-chip ext-class mp-chip--{{tone}} {{pressed ? 'mp-chip--pressed' : ''}}" bind:tap="onTap">
+  <text class="mp-chip__text">{{text}}</text>
+</view>
