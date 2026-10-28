@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "build": "node scripts/build.js",
     "release": "sh scripts/release.sh",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "npm run build"
   },
   "keywords": [
     "miniprogram",
