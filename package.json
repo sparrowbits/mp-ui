@@ -1,6 +1,6 @@
 {
   "name": "@local/mp-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "license": "MIT",
   "description": "原生小程序组件库：TypeScript + glass-easel 链式 API + Skyline 优先（git tag 版本化）",
