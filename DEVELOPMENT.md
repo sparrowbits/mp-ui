@@ -217,15 +217,17 @@ mp-ui/
 # 1. 开发完成，跑通测试
 npm test && npm run type-check
 
-# 2. 更新版本号
+# 2. 更新版本号（npm version 会自动 commit + 打 tag，但 release.sh 会重打）
 npm version patch   # 或 minor / major
 
-# 3. 构建产物
-npm run build
-
-# 4. 打 tag 并推送（release.sh 会做一致性校验）
+# 3. 发布：release.sh 内部执行 build → 提交产物 → 校验 → 打 tag → 推送
 ./scripts/release.sh
 ```
+
+> ⚠️ **B 方案关键约束**：`npm i git+...` 只拉 git 跟踪的文件，且 npm 的
+> `prepare` 钩子**对 git 依赖不生效**（npm 视 git 包为"已构建"）。
+> 因此 `miniprogram_dist/` 产物**必须提交进 git**——`release.sh` 已自动处理。
+> 切勿把 `miniprogram_dist/` 加回 `.gitignore`。
 
 ### 7.3 使用方引入（B 方案）
 

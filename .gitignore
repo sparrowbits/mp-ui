@@ -1,5 +1,6 @@
 node_modules/
-miniprogram_dist/
+# ⚠️ miniprogram_dist/ 必须提交进 git（B 方案：git 协议拉取只认 git 跟踪的文件，
+#    prepare 钩子对 git 依赖不生效）。发布流程见 scripts/release.sh。
 npm-debug.log*
 .DS_Store
 *.tsbuildinfo
