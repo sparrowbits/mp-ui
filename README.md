@@ -32,4 +32,4 @@ DevTools「工具 → 构建 npm」后即可 `usingComponents` 引入。
 
 ## 同步更新
 
-见 [DEVELOPMENT.md §8 双端同步工作流](./DEVELOPMENT.md#8-双端同步工作流)。
+日常迭代与双端同步（含踩过的坑）见 [SYNC.md](./SYNC.md)。
